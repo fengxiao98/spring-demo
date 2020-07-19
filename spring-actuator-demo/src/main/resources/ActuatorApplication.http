@@ -1,0 +1,57 @@
+###
+GET http://localhost:8080/actuator
+
+### 获取服务信息
+GET http://localhost:8080/actuator/appInfo
+
+### 修改服务信息
+POST http://localhost:8080/actuator/appInfo
+Content-Type: application/json
+
+{
+   "key": "year",
+   "value": "2020"
+}
+
+### 删除服务信息
+DELETE http://localhost:8080/actuator/appInfo?key=year
+
+
+### 自定义Endpoint
+GET http://localhost:8080/actuator/book
+
+### —————————————————————————————————————————————— Metrics ————————————————————————————————————————————————
+###
+GET http://localhost:8080/actuator/metrics
+
+###
+GET http://localhost:8080/actuator/metrics/jvm.memory.max
+
+###
+GET http://localhost:8080/demo/visit
+
+###
+GET http://localhost:8080/demo/count
+
+###
+GET http://localhost:8080/actuator/metrics/demo.visit.count
+
+### —————————————————————————————————————————————— HttpTrace ————————————————————————————————————————————————
+
+###
+GET http://localhost:8080/business
+
+###
+GET http://localhost:8080/actuator/metrics
+
+###
+GET http://localhost:8080/actuator/metrics/business_access_count
+
+###
+GET http://localhost:8080/actuator/prometheus
+
+###
+GET http://localhost:8080/actuator/metrics/business.cost
+
+###
+GET http://localhost:8080/actuator/metrics/business.time
