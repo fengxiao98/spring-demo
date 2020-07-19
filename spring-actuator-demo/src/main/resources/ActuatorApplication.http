@@ -45,7 +45,7 @@ GET http://localhost:8080/business
 GET http://localhost:8080/actuator/metrics
 
 ###
-GET http://localhost:8080/actuator/metrics/business_access_count
+GET http://localhost:8080/actuator/metrics/logback.events
 
 ###
 GET http://localhost:8080/actuator/prometheus

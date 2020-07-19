@@ -11,6 +11,7 @@
     <modules>
         <module>spring-actuator-demo</module>
         <module>spring-log4j2-demo</module>
+        <module>spring-test-demo</module>
     </modules>
 
 
@@ -28,8 +29,6 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-
-
         </dependencies>
     </dependencyManagement>
 

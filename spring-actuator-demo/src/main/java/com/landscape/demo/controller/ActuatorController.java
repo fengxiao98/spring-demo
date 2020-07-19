@@ -9,6 +9,7 @@ import io.micrometer.core.instrument.Metrics;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -24,6 +25,13 @@ public class ActuatorController {
     @Timed(value = "business.time")
     @RequestMapping(value = "/business", method = RequestMethod.GET)
     public String doBusiness() {
+        return actuatorService.business();
+    }
+
+    @RequestMapping(value = "/business2", method = RequestMethod.GET)
+    public String maybeFail(
+            @RequestParam(required = false, defaultValue = "1") Integer num
+    ) {
         return actuatorService.business();
     }
 
