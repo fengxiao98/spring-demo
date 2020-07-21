@@ -14,6 +14,7 @@
         <module>spring-test-demo</module>
         <module>spring-demo-util</module>
         <module>spring-feign-demo</module>
+        <module>spring-gateway-demo</module>
     </modules>
 
 
