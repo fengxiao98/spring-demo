@@ -12,6 +12,8 @@
         <module>spring-actuator-demo</module>
         <module>spring-log4j2-demo</module>
         <module>spring-test-demo</module>
+        <module>spring-demo-util</module>
+        <module>spring-feign-demo</module>
     </modules>
 
 

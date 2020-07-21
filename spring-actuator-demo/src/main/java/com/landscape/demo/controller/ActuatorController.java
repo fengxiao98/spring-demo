@@ -1,11 +1,7 @@
 package com.landscape.demo.controller;
 
 import com.landscape.demo.service.ActuatorService;
-import io.micrometer.core.annotation.Counted;
 import io.micrometer.core.annotation.Timed;
-import io.micrometer.core.instrument.Counter;
-import io.micrometer.core.instrument.Gauge;
-import io.micrometer.core.instrument.Metrics;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -23,16 +19,14 @@ public class ActuatorController {
     private ActuatorService actuatorService;
 
     @Timed(value = "business.time")
-    @RequestMapping(value = "/business", method = RequestMethod.GET)
-    public String doBusiness() {
-        return actuatorService.business();
+    @RequestMapping(value = "/randomCost1", method = RequestMethod.GET)
+    public String randomCost1() {
+        return actuatorService.randomCost();
     }
 
-    @RequestMapping(value = "/business2", method = RequestMethod.GET)
-    public String maybeFail(
-            @RequestParam(required = false, defaultValue = "1") Integer num
-    ) {
-        return actuatorService.business();
+    @RequestMapping(value = "/randomCost2", method = RequestMethod.GET)
+    public String randomCost2() {
+        return actuatorService.randomCost();
     }
 
 }

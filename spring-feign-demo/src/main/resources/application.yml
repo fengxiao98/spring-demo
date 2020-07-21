@@ -1,0 +1,5 @@
+feign:
+  httpclient:
+    #默认的连接超时时间是2秒
+    connection-timeout: 1000
+

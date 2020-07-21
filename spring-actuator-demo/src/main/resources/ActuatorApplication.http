@@ -22,7 +22,7 @@ GET http://localhost:8080/actuator/book
 
 ### —————————————————————————————————————————————— Metrics ————————————————————————————————————————————————
 ###
-GET http://localhost:8080/actuator/metrics
+GET http://localhost:8080/actuator/health
 
 ###
 GET http://localhost:8080/actuator/metrics/jvm.memory.max
@@ -39,7 +39,9 @@ GET http://localhost:8080/actuator/metrics/demo.visit.count
 ### —————————————————————————————————————————————— HttpTrace ————————————————————————————————————————————————
 
 ###
-GET http://localhost:8080/business
+GET http://localhost:8080/maybeFail
+###
+GET http://localhost:8080/randomCost
 
 ###
 GET http://localhost:8080/actuator/metrics

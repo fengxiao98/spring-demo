@@ -18,14 +18,17 @@ public class ActuatorService {
     /**
      * 业务方法，随机睡眠一段时间模拟耗时
      */
-    public String business() {
-        int l = random.nextInt(500);
+    public String randomCost() {
+        int l = random.nextInt(1000);
         try {
             Thread.sleep(l);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        logger.info("Business接口被访问，响应时间： " + l);
+        logger.info("randomCost接口被访问，睡眠时间： " + l);
         return "success";
     }
+
+
+
 }
